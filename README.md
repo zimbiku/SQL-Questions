@@ -24,7 +24,7 @@ WHERE emp.salary = subSelect.salary;
 
 Millcreek
 
--- Stored Procedure
+Stored Procedure
 USE [Millcreek Canyon]
 GO
 /****** Object:  StoredProcedure [dbo].[AddReservation]    Script Date: 3/17/2021 11:35:29 AM ******/
@@ -57,13 +57,15 @@ END
 
 
 
--- The view code
+The view code
+
 SELECT        TOP (100) PERCENT dbo.reservations.name, dbo.reservations.date, dbo.reservations.occupants, dbo.sites.name AS Expr1
 FROM            dbo.reservations INNER JOIN
                          dbo.sites ON dbo.reservations.siteId = dbo.sites.siteId
 
 
--- I did have to search online for help creating this as I have never made a sql function before
+I did have to search online for help creating this as I have never made a sql function before
+
 CREATE FUNCTION PopularDay ()  
 RETURNS TABLE  
 AS  
