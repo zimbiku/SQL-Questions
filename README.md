@@ -1,5 +1,6 @@
 # SQL-Questions
 
+Duplicate Email Address
 SELECT email, COUNT(*)
 FROM Employee
 GROUP BY email
@@ -7,7 +8,7 @@ HAVING COUNT(*) > 1
 
 
 
-
+Department Highest Salaries
 SELECT subSelect.name Department, emp.name Employee, subSelect.salary Salary 
 FROM ( SELECT dept.name, dept.departmentId, max(emp1.salary) salary 
        FROM Department dept 
@@ -19,7 +20,7 @@ WHERE emp.salary = subSelect.salary;
 
 
 
-
+Millcreek
 -- Stored Procedure
 USE [Millcreek Canyon]
 GO
