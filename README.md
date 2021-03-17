@@ -49,7 +49,6 @@ BEGIN
 	-- interfering with SELECT statements.
 	SET NOCOUNT ON;
 
-    -- Insert statements for procedure here
 	insert into reservations (name, date, siteId, occupants)
 	values(@name, @date, @siteId, @occupants)
 
